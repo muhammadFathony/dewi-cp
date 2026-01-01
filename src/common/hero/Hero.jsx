@@ -1,5 +1,5 @@
 import HeroImg from "../../assets/img/hero-bg.jpg";
-const Component = () => {
+const Hero = () => {
     return (
         <>
             <img src={HeroImg} alt="" data-aos="fade-in" />
@@ -14,4 +14,4 @@ const Component = () => {
         </>
     );
 }
-export default Component
+export default Hero

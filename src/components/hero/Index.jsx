@@ -1,8 +1,8 @@
-import Hero from "../../common/hero/Index"
+import Hero from "../../common/hero/Hero"
 const Component = () => {
   return (
     <>
-        <section id="hero" className="hero section dark-background">
+        <section id="home" className="hero section dark-background">
             <Hero />
         </section>
     </>
