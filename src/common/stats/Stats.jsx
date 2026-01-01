@@ -1,58 +1,23 @@
+// components/Stats.jsx
+import StatItem from './StatItem';
+import { statsData } from '../../config/stats';
+
 const Stats = () => {
     return (
-        <>
-            <div className="container" data-aos="fade-up" data-aos-delay="100">
-
-                <div className="row gy-4">
-
-                    <div className="col-lg-3 col-md-6">
-                        <div className="stats-item d-flex align-items-center w-100 h-100">
-                            <i className="bi bi-emoji-smile color-blue flex-shrink-0"></i>
-                            <div>
-                                <span data-purecounter-start="0" data-purecounter-end="232" data-purecounter-duration="1" className="purecounter"></span>
-                                <p>Happy Clients</p>
-                            </div>
-                        </div>
-                    </div>
-                    {/* End Stats Item */}
-
-                    <div className="col-lg-3 col-md-6">
-                        <div className="stats-item d-flex align-items-center w-100 h-100">
-                            <i className="bi bi-journal-richtext color-orange flex-shrink-0"></i>
-                            <div>
-                                <span data-purecounter-start="0" data-purecounter-end="521" data-purecounter-duration="1" className="purecounter"></span>
-                                <p>Projects</p>
-                            </div>
-                        </div>
-                    </div>
-                    {/* End Stats Item */}
-
-                    <div className="col-lg-3 col-md-6">
-                        <div className="stats-item d-flex align-items-center w-100 h-100">
-                            <i className="bi bi-headset color-green flex-shrink-0"></i>
-                            <div>
-                                <span data-purecounter-start="0" data-purecounter-end="1463" data-purecounter-duration="1" className="purecounter"></span>
-                                <p>Hours Of Support</p>
-                            </div>
-                        </div>
-                    </div>
-                    {/* End Stats Item */}
-
-                    <div className="col-lg-3 col-md-6">
-                        <div className="stats-item d-flex align-items-center w-100 h-100">
-                            <i className="bi bi-people color-pink flex-shrink-0"></i>
-                            <div>
-                                <span data-purecounter-start="0" data-purecounter-end="15" data-purecounter-duration="1" className="purecounter"></span>
-                                <p>Hard Workers</p>
-                            </div>
-                        </div>
-                    </div>
-                    {/* End Stats Item */}
-
-                </div>
-
+        <div className="container" data-aos="fade-up" data-aos-delay="100">
+            <div className="row gy-4">
+                {statsData.map((stat) => (
+                    <StatItem
+                        key={stat.id}
+                        icon={stat.icon}
+                        color={stat.color}
+                        end={stat.end}
+                        label={stat.label}
+                    />
+                ))}
             </div>
-        </>
+        </div>
     );
-}
-export default Stats
+};
+
+export default Stats;
