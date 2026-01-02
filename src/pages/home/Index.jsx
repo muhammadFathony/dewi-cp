@@ -2,6 +2,7 @@ import Hero from "../../components/hero"
 import About from "../../components/about"
 import Stats from "../../components/stats";
 import Service from "../../components/services";
+import Contact from "../../components/contact"
 const Component = () => {
     return (
         <>
@@ -9,6 +10,7 @@ const Component = () => {
             <About />
             <Stats />
             <Service />
+            <Contact />
         </>
     );
 }
