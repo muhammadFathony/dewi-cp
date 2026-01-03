@@ -1,3 +1,5 @@
+import { NavLink } from "react-router-dom"
+
 import ServiceImg from "../../assets/img/services-1.jpg";
 
 const ServiceItem = () => {
@@ -12,9 +14,9 @@ const ServiceItem = () => {
                         <div className="icon">
                             <i className="bi bi-activity"></i>
                         </div>
-                        <a href="service-details.html" className="stretched-link">
+                        <NavLink to="/detail" className="stretched-link">
                             <h3>Nesciunt Mete</h3>
-                        </a>
+                        </NavLink>
                         <p>Provident nihil minus qui consequatur non omnis maiores. Eos accusantium minus dolores iure perferendis.</p>
                     </div>
                 </div>
