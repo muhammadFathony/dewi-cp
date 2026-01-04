@@ -1841,6 +1841,15 @@ section,
 /*--------------------------------------------------------------
 # Starter Section Section
 --------------------------------------------------------------*/
-.starter-section {
-  /* Add your styles here */
+.portfolio-details .portfolio-details-slider .swiper-pagination {
+    margin-top: 0 !important;
+    position: absolute !important;
+}
+
+.portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet {
+  background-color: #daceca;
+}
+
+.portfolio-details .portfolio-details-slider .swiper-pagination-bullet .swiper-pagination-bullet-active:active {
+  background-color: #ff4a17 !important;
 }

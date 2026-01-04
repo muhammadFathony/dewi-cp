@@ -1,7 +1,5 @@
 import { SwiperSlide, Swiper } from 'swiper/react'
 import { Pagination, Autoplay, } from 'swiper/modules';
-import 'swiper/css';
-import 'swiper/css/pagination';
 import Portofolio1 from "../../assets/img/portfolio/app-1.jpg"
 const Slider = ({ className, data, loading = true, img = true }) => {
     const swiperConfig = {
@@ -15,14 +13,13 @@ const Slider = ({ className, data, loading = true, img = true }) => {
             el: '.swiper-pagination',
             type: 'bullets',
             clickable: true,
+            renderBullet: (index, className) => {
+                return `<span class="${className}" style="background-color: #daceca;"></span>`;
+            },
         },
-        modules: [Autoplay, Pagination]
+        modules: [Autoplay, Pagination],
+
     };
-    const getBannerImageUrl = (domain, path, image) => {
-        const cleanPath = path.replace('./public/', '');
-        const imagePath = `${cleanPath}/${image}`;
-        return imagePath;
-    }
     return (
         <>
             <Swiper className={className} {...swiperConfig}>
@@ -38,7 +35,13 @@ const Slider = ({ className, data, loading = true, img = true }) => {
                         </SwiperSlide>
                     )) : ''
                 }
+                <div className="swiper-pagination"></div>
             </Swiper>
+            <style>{`
+                .swiper-pagination-bullet-active {
+                    background-color: #ff4a17 !important;
+                }
+            `}</style>
         </>
     )
 }
