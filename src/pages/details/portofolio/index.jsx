@@ -9,7 +9,7 @@ const Component = () => {
                 <div className="container" data-aos="fade-up" data-aos-delay="100">
                     <div className="row gy-4">
                         <div className="col-lg-8">
-                            <SwiperDetail data={['1', '2', '3']} className="portfolio-details-slider" />
+                            <SwiperDetail data={['1', '2', '3']} className="portfolio-details-slider" imageType="image" />
                         </div>
                         <ProjectInformation />
                     </div>
