@@ -1,8 +1,9 @@
-import { useEffect, useState } from "react";
-import { Outlet } from "react-router-dom";
+import { useEffect, useState } from "react"
+import { Outlet } from "react-router-dom"
 import Aos from "aos"
-import Footer from "../components/footer";
-import Header from "../components/header";
+import Footer from "../components/footer"
+import Header from "../components/header"
+import Scroll from "../components/scrollontop"
 
 const Component = () => {
   const [isScroll, setIsScroll] = useState(false);
@@ -35,6 +36,7 @@ const Component = () => {
         <Outlet />
       </main>
       <Footer />
+      <Scroll />
     </>
   );
 }

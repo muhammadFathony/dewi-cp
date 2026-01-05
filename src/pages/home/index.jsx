@@ -1,7 +1,8 @@
 import Hero from "../../components/hero"
 import About from "../../components/about"
-import Stats from "../../components/stats";
-import Service from "../../components/services";
+import Stats from "../../components/stats"
+import Service from "../../components/services"
+import Testimonials from "../../components/testimoni"
 import Contact from "../../components/contact"
 const Component = () => {
     return (
@@ -10,6 +11,7 @@ const Component = () => {
             <About />
             <Stats />
             <Service />
+            <Testimonials />
             <Contact />
         </>
     );
